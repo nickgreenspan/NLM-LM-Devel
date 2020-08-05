@@ -1,3 +1,10 @@
+''' 
+Code for converting Google Natural Questions dataset into SQuAD format.
+Uses long answers as context and short answers as answers. Questions without long answers are skipped. 
+Questions with long answers and no short answers are flagged is_impossible. 
+Locates short answer text within long answers by iterating through tokens and skipping over html tags. 
+'''
+
 import os.path
 import json
 import gzip
